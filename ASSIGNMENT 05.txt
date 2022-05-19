@@ -21,7 +21,7 @@ create view claim as select claim_no, policy_no, name , reg_no, doa, location, m
 --
 -- SQl Query Statements
 --
--- -----Question1---------------
+-- -----Question1--------------
 
 select month('2000-12-12');
 select day('2000-12-12');
