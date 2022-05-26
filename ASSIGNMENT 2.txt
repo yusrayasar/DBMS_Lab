@@ -1,0 +1,48 @@
+-- 
+-- Roll No: <60
+-- Name: <YUSRA YASAR>
+-- Program: <Assignment 2>
+-- 
+
+
+--
+-- Table structure for table <Teaches>
+--
+create table Teaches(fno char(5) NOT NULL,sname varchar(15) NOT NULL,sdate date NOT NULL,edate date NOT NULL,primary key(fno, sname),foreign key(fno) references faculty(fno),foreign key(sname) references subject(sname));
+
+--
+-- Dumping data for table <faculty>
+--
+
+insert into faculty values('a11','raj','2020-03-10','AOS');
+insert into faculty values('a12','ram','2020-03-15','ADBMS');
+insert into faculty values('a13','rony','2020-03-20','AI');
+insert into faculty values('a14','rinu','2020-04-12','CN');
+insert into faculty values('a15','roy','2020-04-18','IPR');
+--
+-- Dumping data for table <subject>
+--
+insert into subject values('ADBMS','2020-04-10','2020-04-30','a01','a11');	
+insert into subject values('A0S','2020-04-19','2020-04-27','a02','a12');
+insert into subject values('AI','2020-05-10','2020-05-20','a03','a13');
+insert into subject values('CN','2020-05-25','2020-05-31','a04','a14');
+insert into subject values('IPR','2020-04-11','2020-04-30','a04','a14');
+
+--
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+
+-- -----Question2---------------
+
+ALTER table subject ADD(duration numeric); 
+
+-- -----Question3---------------
+
+ALTER table faculty MODIFY specialization varchar(20);
+
+-- -----Question4---------------
+
+ALTER table subject DROP sdate;
+ALTER table subject DROP edate;
